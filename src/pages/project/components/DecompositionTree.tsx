@@ -1,6 +1,6 @@
 import React from "react";
 
-import { DecompositionTreeItem, DecompositionTreeItemProps } from "~/pages/home/components/DecompositionTreeItem";
+import { DecompositionTreeItem, DecompositionTreeItemProps } from "~/pages/project/components/DecompositionTreeItem";
 
 interface DecompositionTreeProps {
   items: DecompositionTreeItemProps[];
