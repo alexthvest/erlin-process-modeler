@@ -18,33 +18,64 @@ body {
     @apply bg-background;
 }
 
-
 button,
 .button {
     @apply flex items-center px-4 py-2 bg-primary text-white text-sm rounded shadow;
 }
 
-.tree > .node {
-    border-radius: 0;
-    border-left: 2px dashed rgb(100, 100, 100);
+.tree {
+    @apply ml-2;
 }
 
-.tree > .node:last-child {
-    border-left: none;
+.tree ul {
+    @apply ml-6;
 }
 
-.tree > .node:before {
-    position: relative;
-    top: -0.3em;
-    height: 1em;
-    left: -7px;
-    width: 12px;
-    color: white;
-    border-bottom: 2px dashed rgb(100, 100, 100);
+.tree .tree-item {
+    @apply relative;
+}
+
+.tree .tree-item div {
+    @apply flex items-center p-2;
+    @apply text-sm font-semibold;
+    @apply cursor-pointer select-none;
+    @apply rounded-md transition hover:bg-secondary;
+}
+
+.tree .tree-item::before {
+    @apply absolute border-l-2 rounded-none;
+
     content: "";
-    display: inline-block;
+    top: 4px;
+    left: -10px;
+
+    width: 14px;
+    height: 15px;
 }
 
-.tree > .node:last-child:before {
-    border-left: 2px dashed rgb(100, 100, 100);
+.tree .tree-item::after {
+    @apply absolute border-l-2 border-t-2 rounded-none;
+
+    content: "";
+    top: 17px;
+    left: -10px;
+
+    width: 14px;
+    height: 98%;
 }
+
+.tree .tree-item:last-child::after, .tree > .tree-item:first-child::before {
+    @apply hidden;
+}
+
+.tree > .tree-item:first-child::after {
+    @apply rounded-tl-md;
+}
+
+.tree .tree-item:last-child:before {
+    @apply border-b-2 rounded-bl-md;
+}
+
+
+
+

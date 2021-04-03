@@ -8,8 +8,9 @@ import {
   GitForkIcon,
   ServerIcon,
 } from "@primer/octicons-react";
-import { NavigationBar } from "~/pages/Home/components/NavigationBar";
-import { TreeView } from "~/components/TreeView";
+
+import { NavigationBar } from "~/pages/home/components/NavigationBar";
+import { DecompositionTree } from "~/pages/home/components/DecompositionTree";
 
 export const HomePage: React.FC = () => {
   const navigationBarItems = [
@@ -26,32 +27,35 @@ export const HomePage: React.FC = () => {
 
   const treeViewNodes = [
     {
-      title: "Element #1",
+      name: "Element #1",
     },
     {
-      title: "Element #2",
-      nodes: [
+      name: "Element #2",
+      items: [
         {
-          title: "Element #2.1",
+          name: "Element #2.1",
         },
         {
-          title: "Element #2.2",
-          nodes: [
+          name: "Element #2.2",
+          items: [
             {
-              title: "Element #2.2.1",
+              name: "Element #2.2.1",
             },
             {
-              title: "Element #2.2.2",
+              name: "Element #2.2.2",
             },
             {
-              title: "Element #2.2.3",
+              name: "Element #2.2.3",
             },
           ],
+        },
+        {
+          name: "Element #2.3",
         },
       ],
     },
     {
-      title: "Element #3",
+      name: "Element #3",
     },
   ];
 
@@ -59,16 +63,10 @@ export const HomePage: React.FC = () => {
     <div className="flex h-screen">
       <div className="w-1/5 flex bg-white shadow">
         <NavigationBar items={navigationBarItems} />
-        <div className="p-6">
-          <h2 className="text-lg font-semibold">Список проектов</h2>
+        <div className="w-full p-6">
+          <h2 className="text-lg font-semibold">Дерево декомпозиций</h2>
           <hr className="my-4" />
-          <TreeView
-            className="tree"
-            icon={<GitForkIcon className="mr-2" />}
-            openIcon={<ChevronDownIcon className="mr-2" />}
-            closeIcon={<ChevronRightIcon className="mr-2" />}
-            nodes={treeViewNodes}
-          />
+          <DecompositionTree items={treeViewNodes} />
         </div>
       </div>
       <main className="w-4/5">Main</main>
