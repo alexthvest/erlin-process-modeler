@@ -9,18 +9,22 @@ export const ProjectPage: React.FC = () => {
   const navigationBarItems = [
     {
       icon: <ServerIcon />,
+      href: "/",
     },
     {
       icon: <BookmarkIcon />,
+      href: "#",
     },
     {
       icon: <GearIcon />,
+      href: "#",
     },
   ];
 
   const treeViewNodes = [
     {
       name: "Element #1",
+      active: true,
     },
     {
       name: "Element #2",
