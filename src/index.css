@@ -20,7 +20,11 @@ body {
 
 button,
 .button {
-    @apply flex items-center px-4 py-2 bg-primary text-white text-sm rounded shadow;
+    @apply flex items-center px-4 py-2 bg-primary text-white text-sm font-semibold rounded shadow;
+}
+
+.clickable {
+    @apply select-none cursor-auto;
 }
 
 .tree {
@@ -49,7 +53,7 @@ button,
     top: 4px;
     left: -10px;
 
-    width: 14px;
+    width: 10px;
     height: 15px;
 }
 
@@ -60,7 +64,7 @@ button,
     top: 17px;
     left: -10px;
 
-    width: 14px;
+    width: 10px;
     height: 98%;
 }
 
