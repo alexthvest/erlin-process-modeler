@@ -1,13 +1,6 @@
 import React from "react";
 
-import {
-  BookmarkIcon,
-  ChevronDownIcon,
-  ChevronRightIcon,
-  GearIcon,
-  GitForkIcon,
-  ServerIcon,
-} from "@primer/octicons-react";
+import { BookmarkIcon, GearIcon, ServerIcon } from "@primer/octicons-react";
 
 import { NavigationBar } from "~/pages/home/components/NavigationBar";
 import { DecompositionTree } from "~/pages/home/components/DecompositionTree";
@@ -28,6 +21,7 @@ export const HomePage: React.FC = () => {
   const treeViewNodes = [
     {
       name: "Element #1",
+      active: true,
     },
     {
       name: "Element #2",

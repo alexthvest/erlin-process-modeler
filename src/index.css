@@ -43,7 +43,7 @@ button,
     @apply flex items-center p-2;
     @apply text-sm font-semibold;
     @apply cursor-pointer select-none;
-    @apply rounded-md transition hover:bg-secondary;
+    @apply rounded-md transition;
 }
 
 .tree .tree-item::before {
